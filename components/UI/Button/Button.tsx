@@ -1,17 +1,31 @@
 import { HTMLMotionProps, motion } from "framer-motion"
 import { ComponentPropsWithoutRef } from "react"
 
+import { BgSelector } from "@/components/third/BgSelector/BgSelector"
+import clsx from "clsx"
 import { buttonStyles } from "./Button.css"
 
 export type ButtonProps = {
 	text: string
+	isSelected?: boolean
+	withSelection?: boolean
 	handleClick: () => void
 } & ComponentPropsWithoutRef<"button"> &
 	HTMLMotionProps<"button">
 
-export const Button = ({ text, handleClick, ...props }: ButtonProps) => (
+export const Button = ({
+	text,
+	isSelected,
+	withSelection,
+	handleClick,
+	...props
+}: ButtonProps) => (
 	<motion.button
-		className={buttonStyles.button}
+		layout
+		className={clsx(
+			buttonStyles.button,
+			withSelection && buttonStyles.btnTransparent
+		)}
 		{...props}
 		whileHover={{
 			backgroundColor: "#ddd",
@@ -21,6 +35,14 @@ export const Button = ({ text, handleClick, ...props }: ButtonProps) => (
 		}}
 		onClick={handleClick}
 	>
-		{text}
+		{isSelected && <BgSelector />}
+		<motion.span
+			className={buttonStyles.text}
+			animate={{
+				color: isSelected ? "#fff" : "#000",
+			}}
+		>
+			{text}
+		</motion.span>
 	</motion.button>
 )

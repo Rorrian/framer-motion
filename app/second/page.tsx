@@ -35,7 +35,7 @@ const mockData = [
 	},
 ]
 
-export default function BasePage() {
+export default function SecondPage() {
 	return (
 		<>
 			<Title headingType="h2">Show/hide elements</Title>
