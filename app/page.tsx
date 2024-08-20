@@ -36,6 +36,10 @@ export default function Home() {
 			url: "/4",
 			name: "Dynamically trigger animations by viewport",
 		},
+		{
+			url: "/5",
+			name: "Reorder list items (Drag & Drop)",
+		},
 	]
 
 	return (
