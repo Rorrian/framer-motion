@@ -1,5 +1,6 @@
 import clsx from "clsx"
-import React from "react"
+import { motion } from "framer-motion"
+import React, { forwardRef } from "react"
 
 import { titleStyles } from "./Title.css"
 
@@ -10,22 +11,31 @@ interface TitleProps {
 	headingType?: TitleHeadingType
 	style?: React.CSSProperties
 	children: string | React.ReactNode
+	// ref?
 }
 
-export const Title: React.FC<TitleProps> = ({
-	children,
-	titleClassName,
-	headingType = "h3",
-	...props
-}) => {
-	const TitleComponent = headingType
+// Для использование motion с кастомными компонентами, нужно добавить forwardRef и атрибут ref
+export const Title: React.FC<TitleProps> = forwardRef(
+	(
+		{ children, titleClassName, headingType = "h3", ...props },
+		ref: React.LegacyRef<HTMLHeadingElement> | undefined
+	) => {
+		const TitleComponent = headingType
 
-	return (
-		<TitleComponent
-			className={clsx(titleStyles.title({ type: headingType }), titleClassName)}
-			{...props}
-		>
-			{children}
-		</TitleComponent>
-	)
-}
+		return (
+			<TitleComponent
+				ref={ref}
+				className={clsx(
+					titleStyles.title({ type: headingType }),
+					titleClassName
+				)}
+				{...props}
+			>
+				{children}
+			</TitleComponent>
+		)
+	}
+)
+
+// Использование motion с кастомными компонентами
+export const MTitle = motion(Title)

@@ -1,7 +1,7 @@
 "use client"
 
-import { Collapsible } from "@/components/second/Collapsible"
-import { Filter } from "@/components/second/Filter/Filter"
+import { Collapsible } from "@/components/2/Collapsible"
+import { Filter } from "@/components/2/Filter/Filter"
 import { Title } from "@/components/UI/Title/Title"
 
 const mockData = [

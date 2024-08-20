@@ -1,7 +1,7 @@
 "use client"
 
-import { Filter2 } from "@/components/third/Filter2/Filter2"
-import { Menu } from "@/components/third/Menu/Menu"
+import { Filter2 } from "@/components/3/Filter2/Filter2"
+import { Menu } from "@/components/3/Menu/Menu"
 import { Title } from "@/components/UI/Title/Title"
 
 const menuData = ["Short", "Very Looooooooong item", "Normal item"]

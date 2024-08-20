@@ -1,7 +1,7 @@
 import { HTMLMotionProps, motion } from "framer-motion"
 import { ComponentPropsWithoutRef } from "react"
 
-import { BgSelector } from "@/components/third/BgSelector/BgSelector"
+import { BgSelector } from "@/components/3/BgSelector/BgSelector"
 import clsx from "clsx"
 import { buttonStyles } from "./Button.css"
 

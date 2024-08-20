@@ -25,12 +25,16 @@ export default function Home() {
 			name: "Base",
 		},
 		{
-			url: "/second",
+			url: "/2",
 			name: "Show/hide elements",
 		},
 		{
-			url: "/third",
+			url: "/3",
 			name: "Magic of Animation",
+		},
+		{
+			url: "/4",
+			name: "Dynamically trigger animations by viewport",
 		},
 	]
 

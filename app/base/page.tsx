@@ -10,6 +10,7 @@ export default function BasePage() {
 			x: -1000,
 			opacity: 0,
 		},
+		// Все сразу
 		visible: {
 			x: 0,
 			opacity: 1,
@@ -20,6 +21,7 @@ export default function BasePage() {
 			opacity: 0,
 			y: 100,
 		}),
+		// Появление элементов по очереди
 		visible: (i: number) => ({
 			opacity: 1,
 			y: 0,
