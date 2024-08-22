@@ -2,12 +2,13 @@
 
 import clsx from "clsx"
 
-import { homeStyles } from "@/app/Home.css"
 import { Title } from "@/components/UI/Title/Title"
 import MoonIcon from "@/public/icons/moon.svg"
 import SunIcon from "@/public/icons/sun.svg"
 import { useThemeStore } from "@/store/useThemeStore"
 import { darkTheme, lightTheme } from "@/theme/theme.css"
+
+import { mainStyles } from "./Main.css"
 
 export default function Main({
 	children,
@@ -18,18 +19,18 @@ export default function Main({
 
 	return (
 		<main
-			className={clsx(homeStyles.main, isDarkMode ? darkTheme : lightTheme)}
+			className={clsx(mainStyles.main, isDarkMode ? darkTheme : lightTheme)}
 		>
-			<header className={homeStyles.header}>
+			<header className={mainStyles.header}>
 				<Title headingType="h1">Framer Motion</Title>
 
 				<button
 					aria-label="Toggle theme"
-					className={homeStyles.button}
+					className={mainStyles.button}
 					onClick={toggleTheme}
 				>
-					<MoonIcon className={homeStyles.icon({ isShow: isDarkMode })} />
-					<SunIcon className={homeStyles.icon({ isShow: !isDarkMode })} />
+					<MoonIcon className={mainStyles.icon({ isShow: isDarkMode })} />
+					<SunIcon className={mainStyles.icon({ isShow: !isDarkMode })} />
 				</button>
 			</header>
 

@@ -20,6 +20,8 @@ export const InteractiveList = ({ initialItems }: ListProps) => {
 			<Form setItems={setItems} />
 
 			<List items={items} setItems={setItems} />
+
+			<i>P.S. try double-clicking to delete items</i>
 		</>
 	)
 }

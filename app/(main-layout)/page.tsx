@@ -40,6 +40,10 @@ export default function Home() {
 			url: "/5",
 			name: "Reorder list items (Drag & Drop)",
 		},
+		{
+			url: "/6",
+			name: "Sticky Menu",
+		},
 	]
 
 	return (

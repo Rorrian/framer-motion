@@ -21,6 +21,7 @@ const main = style(
 			rowGap: "50px",
 			padding: "32px 48px 0px",
 			transition: "background-image 0.3s ease-in-out",
+			color: vars.themeVariables.content.primary,
 
 			selectors: {
 				"&&:before": {
@@ -84,7 +85,7 @@ const icon = recipe(
 	"icon"
 )
 
-export const homeStyles = {
+export const mainStyles = {
 	main,
 	header,
 	button,
