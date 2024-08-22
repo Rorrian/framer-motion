@@ -44,7 +44,13 @@ export default function Home() {
 
 	return (
 		<div>
-			<ul>
+			<ol
+				style={{
+					listStyleType: "auto",
+					marginTop: "3rem",
+					marginLeft: "5rem",
+				}}
+			>
 				{items.map((el, i) => (
 					<motion.li
 						key={el.name}
@@ -52,11 +58,14 @@ export default function Home() {
 						initial="hidden"
 						animate="visible"
 						custom={i}
+						style={{
+							marginBottom: "1rem",
+						}}
 					>
 						<Link href={el.url}>{el.name}</Link>
 					</motion.li>
 				))}
-			</ul>
+			</ol>
 		</div>
 	)
 }

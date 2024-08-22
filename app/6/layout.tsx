@@ -1,11 +1,6 @@
 import type { Metadata } from "next"
-import { Inter } from "next/font/google"
 
-import Main from "@/components/UI/Main/Main"
-
-import "../styles/index.scss"
-
-const inter = Inter({ subsets: ["latin"] })
+import "../../styles/index.scss"
 
 export const metadata: Metadata = {
 	title: "Framer Motion Examples",
@@ -19,9 +14,7 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<body className={inter.className}>
-				<Main>{children}</Main>
-			</body>
+			<body>{children}</body>
 		</html>
 	)
 }
